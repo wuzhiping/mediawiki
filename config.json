@@ -1,0 +1,25 @@
+{
+  "defaultWiki": "mediawiki:80",
+  "wikis": {
+    "en.wikipedia.org": {
+      "sitename": "Wikipedia",
+      "server": "https://en.wikipedia.org",
+      "articlepath": "/wiki",
+      "scriptpath": "/w",
+      "token": null,
+      "username": null,
+      "password": null,
+      "private": false
+    },
+    "mediawiki:80": {
+      "sitename": "Local MediaWiki Docker",
+      "server": "http://mediawiki:80",
+      "articlepath": "/",
+      "scriptpath": "/",
+      "token": null,
+      "username": "admin",
+      "password": "admin123456",
+      "private": false
+    }
+  }
+}
