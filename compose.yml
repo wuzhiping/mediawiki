@@ -1,0 +1,48 @@
+services:
+  mediawiki:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: shawoo/mediawiki
+    restart: always
+    environment:
+      ver: 1
+    ports:
+      - "48080:80"
+    #volumes:
+    #- ./LocalSettings.php:/var/www/html/LocalSettings.php
+
+  mcp:
+    image: shawoo/mediawiki-mcp
+    restart: always
+    volumes:
+      - ./config.json:/app/config.json
+    #ports:
+    #  - "8081:8080"
+
+  db:
+    image: postgres:18
+    restart: always
+    environment:
+      POSTGRES_DB: wiki
+      POSTGRES_USER: wikiuser
+      POSTGRES_PASSWORD: wikipass
+    #ports:
+    #  - "5432:5432"
+
+  postgresus:
+    image: rostislavdugin/postgresus:latest
+    restart: always
+    volumes:
+      - ./postgresus-data:/postgresus-data
+    ports:
+      - "4005:4005"
+
+  pghero:
+    image: ankane/pghero
+    restart: always
+    environment:
+      DATABASE_URL: "postgres://wikiuser:wikipass@db:5432/wiki"
+    #ports:
+    #  - "8082:8080"
+    depends_on: [db]
