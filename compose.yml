@@ -11,6 +11,7 @@ services:
       - "48080:80"
     #volumes:
     #- ./LocalSettings.php:/var/www/html/LocalSettings.php
+    #- ./Mermaid:/var/www/html/extensions/Mermaid
 
   mcp:
     image: shawoo/mediawiki-mcp
