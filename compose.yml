@@ -1,9 +1,9 @@
 services:
   mediawiki:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: shawoo/mediawiki
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    image: shawoo/semantic-media-wiki
     restart: always
     environment:
       ver: 1
