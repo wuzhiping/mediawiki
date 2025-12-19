@@ -20,7 +20,7 @@ pg_stat_statements.track = all
 </pre>
  <img src="./wiki.png"/>
 
-
+# shawoo/semantic-media-wiki
 <pre>
 #在 LocalSettings.php 末尾追加两行（顺序不能反）：
 wfLoadExtension( 'SemanticMediaWiki' );
