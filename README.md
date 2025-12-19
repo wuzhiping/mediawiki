@@ -17,7 +17,7 @@ pg_stat_statements.track = all
 /var/lib/postgresql/data
 
 
-<pre/>
+</pre>
  <img src="./wiki.png"/>
 
 
@@ -30,5 +30,6 @@ error_reporting( E_ALL & ~E_USER_DEPRECATED );
 ini_set( 'display_errors', 0 );
 
 # root bash
+docker exec -it -u root mediawiki-mediawiki-1 bash 
 php maintenance/update.php --quick
 </pre>
