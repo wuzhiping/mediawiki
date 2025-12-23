@@ -5,6 +5,9 @@ https://www.semantic-mediawiki.org/wiki/Help:Installation/zh-hans
 
 https://github.com/SemanticMediaWiki/Mermaid
 
+https://www.mediawiki.org/wiki/Extension:EventBus
+
+https://github.com/wikimedia/mediawiki-extensions-EventBus
 
 <pre>
  
