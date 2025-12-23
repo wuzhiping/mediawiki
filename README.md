@@ -7,8 +7,18 @@ https://github.com/SemanticMediaWiki/Mermaid
 
 
 <pre>
+ 
+$wgScriptPath = '';
+$wgArticlePath = '/w/$1';
+$wgUsePathInfo = true;
 
-
+# 自定义命名空间当前必须要有对应的讨论命名空间，为我添加的命名空间定义常量。
+define("NS_JA", 3000); // 这必须是偶数。
+define("NS_JA_TALK", 3001); // 这必须是下一个奇整数。
+# 添加命名空间。
+$wgExtraNamespaces[NS_JA] = "JA";
+$wgExtraNamespaces[NS_JA_TALK] = "JA_talk"; # 请注意命名空间名称中的下划线
+ 
 /var/lib/postgresql/18/docker/postgresql.conf
 
 shared_preload_libraries = 'pg_stat_statements'
